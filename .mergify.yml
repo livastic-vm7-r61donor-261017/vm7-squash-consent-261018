@@ -1,0 +1,11 @@
+pull_request_rules:
+  - name: VM7 external fork squash consent discriminator 261018
+    conditions:
+      - base = main
+      - head = vm7-squash-consent-attack
+      - author = livastic-vm7-r61donor-261017
+      - title = VM7_SQUASH_EXTERNAL_FORK_CONSENT_261018
+      - "#commits >= 2"
+    actions:
+      squash:
+        bot_account: "{{ author }}"
